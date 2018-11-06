@@ -1,0 +1,2 @@
+# buildAndMergeFramework
+build并且合并真机和模拟器的framework的python脚本
