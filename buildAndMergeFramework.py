@@ -4,8 +4,8 @@ import re
 import shutil
 import datetime
 
-PRO_NAME = 'SobotKit'
-TARGET_NAME = 'SobotKit'
+PRO_NAME = 'project name' ## 项目名称
+TARGET_NAME = 'target name' ## target名称
 
 ########################
 CURRENT_DIR = os.getcwd()
