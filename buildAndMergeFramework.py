@@ -5,17 +5,17 @@ import shutil
 import datetime
 
 
-########################
-CURRENT_DIR = os.getcwd()
+## targetName 与 projectName必须相同，否则请修改TARGET_NAME变量
 
+CURRENT_DIR = os.getcwd()
 
 for filePath in os.listdir(CURRENT_DIR):
     if filePath.endswith('.xcodeproj'):
-        TARGET_NAME = filePath.split('.')[0]
+        PRO_NAME = filePath.split('.')[0]
 
-PRO_NAME = TARGET_NAME
+TARGET_NAME = PRO_NAME
 
-if len(TARGET_NAME) <= 0:
+if len(PRO_NAME) <= 0:
     print 'target name is not exist'
     exit(-1);
 
