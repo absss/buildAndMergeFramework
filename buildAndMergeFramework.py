@@ -6,11 +6,22 @@ import re
 import shutil
 import datetime
 
-PRO_NAME = 'project name' ## 项目名称
-TARGET_NAME = 'target name' ## target名称
 
-########################
+## targetName 与 projectName必须相同，否则请修改TARGET_NAME变量
+
 CURRENT_DIR = os.getcwd()
+
+for filePath in os.listdir(CURRENT_DIR):
+    if filePath.endswith('.xcodeproj'):
+        PRO_NAME = filePath.split('.')[0]
+
+TARGET_NAME = PRO_NAME
+
+if len(PRO_NAME) <= 0:
+    print 'target name is not exist'
+    exit(-1);
+
+print 'project name:%s\ntarget_name:%s'%(PRO_NAME,TARGET_NAME)
 
 WRK_DIR = '%s/build'%CURRENT_DIR
 
